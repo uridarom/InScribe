@@ -1,0 +1,35 @@
+name: InScribe
+options:
+  bundleIdPrefix: com.inscribe
+  xcodeVersion: "16.0"
+  deploymentTarget:
+    iOS: "16.0"
+
+targets:
+  InScribe:
+    type: application
+    platform: iOS
+    sources:
+      - path: InScribe/Sources
+        type: group
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: true
+        MARKETING_VERSION: "1.0"
+        CURRENT_PROJECT_VERSION: 1
+        INFOPLIST_KEY_UISupportedInterfaceOrientations[iPad]:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+          - UIInterfaceOrientationPortraitUpsideDown
+        INFOPLIST_KEY_UISupportedInterfaceOrientations~ipad:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+          - UIInterfaceOrientationPortraitUpsideDown
+        INFOPLIST_KEY_UIUserInterfaceStyle: Light
+        INFOPLIST_KEY_UILaunchScreen_Generation: true
+        INFOPLIST_KEY_UIMainStoryboardFile: ""
+        SWIFT_VERSION: "5.9"
+        ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES: true
+        LINK_FRAMEWORKS: PencilKit
