@@ -127,6 +127,7 @@ Allow the user to change the ink color and stroke width via an on-screen toolbar
 
 ### Goal
 Organize content into named notebooks, each containing one or more pages. The app's home screen becomes a notebook browser.
+Maintain the simplistic style seen in the toolbar.
 
 ### Data Models (SwiftData)
 
@@ -173,7 +174,8 @@ Organize content into named notebooks, each containing one or more pages. The ap
 ### Notebook View — Page Navigation
 
 - Tapping a notebook navigates to a page view.
-- Display a horizontal page strip at the bottom (thumbnail scroll view) for navigating between pages.
+- Display a small, very minimal horizontal page strip at the bottom (thumbnail scroll view) for navigating between pages. 
+  This strip should be short in height to not obscure drawing area.
 - An "Add Page" button appends a new blank `Page` to the notebook.
 - Pages are re-orderable via drag-and-drop on the thumbnail strip.
 

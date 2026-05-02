@@ -11,6 +11,32 @@ struct CanvasView: View {
                 .ignoresSafeArea()
 
             HStack(spacing: 8) {
+                // Home and new page buttons
+                VStack(alignment: .leading, spacing: 8) {
+                    
+                    Button {
+                        // Implement go-to-home logic here
+                    } label: {
+                        Image(systemName:"house")
+                            .font(.system(size: 20, weight: .medium))
+                            .foregroundColor(.white)
+                            .frame(width: 45, height: 45)
+                            .background(Color.gray.opacity(0.8))
+                            .clipShape(RoundedRectangle(cornerRadius: 10))
+                    }
+                    
+                    Button {
+                        // Implement add-page logic here
+                    } label: {
+                        Image(systemName: "document.badge.plus")
+                            .font(.system(size: 20, weight: .medium))
+                            .foregroundColor(.white)
+                            .frame(width: 45, height: 45)
+                            .background(Color.gray.opacity(0.8))
+                            .clipShape(RoundedRectangle(cornerRadius: 10))
+                    }
+                }
+                
                 // Auto-slide and nudge buttons
                 VStack(alignment: .leading, spacing: 8) {
                     Button {
@@ -19,7 +45,7 @@ struct CanvasView: View {
                         }
                         canvasViewModel.autoSlideEnabled = autoSlideOn
                     } label: {
-                        Text(autoSlideOn ? "W" : "T")
+                        Image(systemName: autoSlideOn ? "pencil.line" : "pencil.and.scribble")
                             .font(.system(size: 20, weight: .medium))
                             .foregroundColor(.white)
                             .frame(width: 45, height: 45)
@@ -27,7 +53,7 @@ struct CanvasView: View {
                             .clipShape(RoundedRectangle(cornerRadius: 10))
                     }
 
-                    Text("→")
+                    Image(systemName: "arrow.forward")
                         .font(.system(size: 20, weight: .medium))
                         .foregroundColor(.white)
                         .frame(width: 45, height: 45)
